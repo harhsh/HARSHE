@@ -1,0 +1,14 @@
+
+{
+    "name": "HARSHA",
+    "short_name": "HARSHA",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#003366",
+    "theme_color": "#ff6600",
+    "icons": [{
+        "src": "logo.png",
+        "sizes": "192x192",
+        "type": "image/png"
+    }]
+}

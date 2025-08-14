@@ -1,0 +1,19 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="420" viewBox="0 0 1200 420">
+  <defs>
+    <linearGradient id="gg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#0b1020"/>
+      <stop offset="1" stop-color="#121934"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0" stop-color="#ff7a18"/>
+      <stop offset="1" stop-color="#1e88e5"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="420" fill="url(#gg)"/>
+  <circle cx="980" cy="140" r="120" fill="url(#accent)" opacity="0.25"/>
+  <circle cx="240" cy="320" r="140" fill="#1e88e5" opacity="0.15"/>
+  <text x="70" y="180" font-family="Verdana, Arial" font-weight="700" font-size="54" fill="#e6eaf2">Know India & World</text>
+  <text x="70" y="240" font-family="Verdana, Arial" font-size="26" fill="#c3ccda">राज्य/जिले की जानकारी, आधिकारिक साइटें, स्टडी मटेरियल</text>
+  <rect x="70" y="290" rx="14" ry="14" width="360" height="14" fill="url(#accent)"/>
+</svg>
