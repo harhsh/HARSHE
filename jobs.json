@@ -1,0 +1,38 @@
+[
+  {
+    "title": "SSC CGL 2025",
+    "org": "Staff Selection Commission",
+    "apply_link": "https://ssc.nic.in/",
+    "syllabus": "General Intelligence, Quantitative Aptitude, English, General Awareness",
+    "start_date": "2025-08-20",
+    "last_date": "2025-09-15",
+    "status": "Open"
+  },
+  {
+    "title": "Railway RRB Technician",
+    "org": "Indian Railways",
+    "apply_link": "https://www.rrbcdg.gov.in/",
+    "syllabus": "Physics, Maths, Basics of Computers, Reasoning",
+    "start_date": "2025-08-01",
+    "last_date": "2025-08-31",
+    "status": "Open"
+  },
+  {
+    "title": "IBPS PO 2025",
+    "org": "Institute of Banking Personnel Selection",
+    "apply_link": "https://www.ibps.in/",
+    "syllabus": "Quant, Reasoning, English, GA, Computers",
+    "start_date": "2025-08-10",
+    "last_date": "2025-09-05",
+    "status": "Open"
+  },
+  {
+    "title": "UPSC CSE 2026 (Prep)",
+    "org": "Union Public Service Commission",
+    "apply_link": "https://upsc.gov.in/",
+    "syllabus": "GS, CSAT, Optional (History)",
+    "start_date": "2025-12-01",
+    "last_date": "2026-02-15",
+    "status": "Upcoming"
+  }
+]

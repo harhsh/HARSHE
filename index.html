@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HARSHA — HARSH Online Khamtara</title>
+  <meta name="description" content="Digital Seva, Govt Jobs, Admit Cards, Answer Keys, Official Links — HARSH Online Khamtara"/>
+  <meta name="theme-color" content="#ff7a18"/>
+  <meta property="og:title" content="HARSHA — HARSH Online Khamtara"/>
+  <meta property="og:description" content="सभी ऑनलाइन कार्य, सरकारी नौकरियां, एडमिट कार्ड, उत्तर कुंजी — एक ही ऐप में"/>
+  <meta property="og:image" content="assets/logo/logo-512.png"/>
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/icons/icon-192.png">
+  <style>
+    :root{
+      --orange:#ff7a18; --blue:#1e88e5; --bg:#0b1020; --card:#121934; --muted:#98a2b3; --text:#e6eaf2;
+      --success:#1db954; --danger:#ff4757; --line:#25325b; --bg2:#0c1530;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;background:linear-gradient(180deg,#0b1020,#0e1430);color:var(--text)}
+    a{color:#fff}
+    header{position:sticky;top:0;z-index:50;background:rgba(10,14,30,0.85);backdrop-filter: blur(10px);border-bottom:1px solid #1f2a4a}
+    .container{max-width:1160px;margin:0 auto;padding:16px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .brand img{width:44px;height:44px;border-radius:12px}
+    .title h1{margin:0;line-height:1}
+    .sub{font-size:13px;color:#cbd5e1}
+    .nav{display:flex;gap:10px;align-items:center}
+    .btn{background:linear-gradient(90deg,var(--orange),var(--blue));border:none;color:white;padding:10px 16px;border-radius:12px;font-weight:700;cursor:pointer}
+    .btn.ghost{background:transparent;border:1px solid var(--line)}
+    .btn.small{padding:8px 12px;border-radius:10px}
+    .grid{display:grid;gap:16px}
+    .hero{display:grid;grid-template-columns:1.2fr 0.8fr;gap:18px;align-items:center;margin-top:14px}
+    .card{background:var(--card);border:1px solid #1f2a4a;border-radius:20px;box-shadow:0 10px 30px rgba(0,0,0,0.28)}
+    .card.pad{padding:20px}
+    .pill{border:1px solid var(--line);padding:6px 10px;border-radius:999px;color:#cbd5e1}
+    .searchbar{display:flex;gap:10px;margin-top:12px}
+    .searchbar input{flex:1;padding:12px 14px;border-radius:12px;border:1px solid var(--line);background:var(--bg2);color:var(--text)}
+    .sections{grid-template-columns:repeat(3,1fr)}
+    .section-title{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
+    .link-list{display:grid;gap:10px}
+    .link{padding:12px;border-radius:12px;border:1px solid var(--line);background:var(--bg2)}
+    .services{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .service{padding:14px;border:1px solid var(--line);background:var(--bg2);border-radius:14px;min-height:110px;display:grid;align-content:start;gap:8px}
+    .service .icon{font-size:24px}
+    .job{display:grid;gap:10px;padding:16px;border-radius:16px;border:1px solid #27355f;background:#0b1636}
+    .job .row{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+    .job .meta{display:flex;gap:8px;flex-wrap:wrap}
+    .chips{display:flex;gap:8px;flex-wrap:wrap}
+    .nores{padding:16px;border:1px dashed var(--line);border-radius:12px;color:#cbd5e1}
+    .footer{color:#94a3b8;padding:28px 0}
+    .welcome{position:fixed;inset:0;background:rgba(0,0,0,0.72);display:none;place-items:center}
+    .welcome .box{background:#0b1636;border:1px solid #27355f;border-radius:18px;max-width:560px;padding:20px}
+    .chatbox{position:fixed;bottom:18px;right:18px;width:340px;max-width:95vw;background:#0b1636;border:1px solid #27355f;border-radius:18px;display:none;flex-direction:column;overflow:hidden}
+    .chatbox header{position:unset;background:#0d1a3a;border:0;padding:10px 12px}
+    .chatlog{padding:12px;height:220px;overflow:auto;display:grid;gap:10px}
+    .msg{padding:10px;border-radius:10px;max-width:80%}
+    .msg.user{background:#11214a;justify-self:end}
+    .msg.bot{background:#121f3f;justify-self:start}
+    .chatbox .row{display:flex;gap:8px;padding:10px;border-top:1px solid #27355f}
+    @media(max-width:980px){.hero{grid-template-columns:1fr}.sections{grid-template-columns:1fr}.services{grid-template-columns:1fr 1fr}}
+  </style>
+</head>
+<body>
+  <header role="banner">
+    <div class="container" style="display:flex;align-items:center;gap:14px;justify-content:space-between">
+      <div class="brand">
+        <img src="assets/logo/logo-128.png" alt="HARSHA logo">
+        <div class="title">
+          <h1>HARSH Online Khamtara</h1>
+          <div class="sub">फोन: <a aria-label="Call 7722915520" href="tel:+917722915520">7722915520</a> • <a href="https://wa.me/917722915520" target="_blank" rel="noopener">WhatsApp</a></div>
+        </div>
+      </div>
+      <nav class="nav" aria-label="Primary">
+        <a class="pill" href="#services">Services</a>
+        <a class="pill" href="#jobs">Jobs</a>
+        <a class="pill" href="#study">Study</a>
+        <button class="btn small" id="openChat">Talk to Owner</button>
+        <button class="btn ghost small" id="installBtn" hidden>Install App</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container grid">
+    <section class="hero" aria-label="Welcome and Search">
+      <div class="card pad">
+        <div class="section-title">
+          <h2>HARSHA — Digital Seva & Govt. Jobs</h2>
+          <span class="pill">Orange & Blue Theme</span>
+        </div>
+        <p>यह ऐप सभी ऑनलाइन कार्यों, सरकारी फॉर्म, रिज़ल्ट, एडमिट कार्ड, आंसर-की, तथा विभिन्न विभागों की आधिकारिक वेबसाइटों के त्वरित लिंक प्रदान करता है।</p>
+        <div class="searchbar" role="search">
+          <input id="searchInput" placeholder="Search jobs, services, admit cards..." aria-label="Search"/>
+          <button class="btn" id="searchBtn">Search</button>
+        </div>
+        <div class="chips">
+          <span class="pill">SSC</span><span class="pill">Railway</span><span class="pill">UPSC</span><span class="pill">Bank</span>
+        </div>
+      </div>
+      <div class="card" style="overflow:hidden">
+        <img src="assets/images/banner-jobs.svg" alt="Latest Govt Jobs banner" style="width:100%;height:auto;display:block">
+      </div>
+    </section>
+
+    <section id="services" class="card pad">
+      <div class="section-title">
+        <h3>All Digital Services</h3>
+        <img src="assets/images/banner-services.svg" alt="" style="height:36px;opacity:.8">
+      </div>
+      <div class="services" id="servicesGrid"></div>
+    </section>
+
+    <section class="grid sections" id="quickLinks">
+      <div class="card pad">
+        <div class="section-title">
+          <h3>Latest Jobs</h3>
+          <a class="pill" href="#jobs">See all</a>
+        </div>
+        <div id="latestJobs" class="link-list"></div>
+      </div>
+
+      <div class="card pad">
+        <div class="section-title">
+          <h3>Admit Card / Answer Keys</h3>
+          <span class="pill">Direct Links</span>
+        </div>
+        <div id="admitCards" class="link-list"></div>
+      </div>
+
+      <div class="card pad">
+        <div class="section-title">
+          <h3 id="study">Official Sites & Study</h3>
+          <img src="assets/images/banner-study.svg" alt="" style="height:28px;opacity:.9">
+        </div>
+        <div id="officialLinks" class="link-list"></div>
+      </div>
+    </section>
+
+    <section class="card pad" id="jobs">
+      <div class="section-title">
+        <h3>All Job Notifications</h3>
+        <span class="pill" id="jobCount"></span>
+      </div>
+      <div class="grid" id="jobList"></div>
+      <div id="noResults" class="nores" style="display:none">कोई परिणाम नहीं मिला। कृपया अलग कीवर्ड आज़माएँ।</div>
+    </section>
+  </main>
+
+  <footer class="container footer">
+    © <span id="year"></span> HARSH Online Khamtara — सभी अधिकार सुरक्षित.
+  </footer>
+
+  <!-- Welcome Screen -->
+  <div class="welcome" id="welcome" aria-modal="true" role="dialog">
+    <div class="box">
+      <h2 style="display:flex;align-items:center;gap:8px;margin-bottom:8px">🙏 Welcome — Harsh Khamtra</h2>
+      <p>ऐप खोलते ही आपका स्वागत है! नीचे दिए बटन से HARSHA ऐप में प्रवेश करें।</p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap">
+        <button class="btn" id="enterApp">Enter App</button>
+        <a class="btn ghost" href="tel:+917722915520">Call Owner</a>
+        <a class="btn ghost" href="https://wa.me/917722915520" target="_blank" rel="noopener">WhatsApp</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Chat Box -->
+  <div class="chatbox" id="chatbox" aria-live="polite">
+    <header><strong>Talk to Owner</strong> — Auto Reply</header>
+    <div class="chatlog" id="chatlog"></div>
+    <div class="row">
+      <input id="chatInput" placeholder="Type your message..." aria-label="Chat input" style="flex:1;padding:10px;border-radius:10px;border:1px solid #27355f;background:#0c1530;color:#fff">
+      <button class="btn" id="sendMsg">Send</button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
